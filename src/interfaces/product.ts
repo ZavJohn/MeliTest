@@ -106,6 +106,10 @@ export interface Result {
 export interface Pictures{
     id: String;
     url: String;
+    secure_url: String;
+    size: String;
+    max_size: String;
+    quality: String;
 
 }
 

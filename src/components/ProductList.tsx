@@ -7,7 +7,7 @@ export const ProductList = () => {
   
   const { data, isLoading, hasError } =  getProduct('ipod');
   
-  
+  console.log(data);
   return (
     <>
         
@@ -19,16 +19,21 @@ export const ProductList = () => {
                   </div>
                 )
               :(
-                <ul>
-                {
-                  data.map ( item => (
-                    <li key={item.id}>
-                      { item.name }
+                <div className="search-result-container ">
+                    <ul className="">
+                    {
+                      data.map ( item => (
+                        <li key={item.id} className="div-result-list">
+                          <img src={item.thumbnail} alt={item.thumbnail_id} className="img-search-result" />
+                          <a className="result-list-style currSign">{ item.price }</a>
+                          <p className="description-search">{ item.title }</p>
+                          <a className="description-search-city">{ item.address.city_name }</a>
 
-                    </li>  
-                  ))
-                }
-                </ul>
+                        </li>  
+                      ))
+                    }
+                    </ul>
+                </div>
                 )
         } 
       </>

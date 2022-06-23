@@ -1,8 +1,14 @@
+.row-search{
+    height: 68px;
+}
+
 .search-result-container{
-    margin-left: 11.7%;
     background: #ffffff;
-    width: 75.1%;
+    display: flex;
+    flex-direction: column;
     position: absolute;
+    top: 27%;
+    width: 90%;
 }
 
 .result-list-style{
@@ -13,6 +19,7 @@
 .img-search-result{
     padding-top: 1.3%;
     cursor: pointer;
+    width: 200px;
 }
 
 .section-title-product{
@@ -58,4 +65,8 @@ a.description-search{
 
 .li-result-list{
     margin: 0% 0% -9% 0%;
+}
+
+.currSign:before {
+    content: '$';
 }
