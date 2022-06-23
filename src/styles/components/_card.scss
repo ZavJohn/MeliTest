@@ -1,52 +1,78 @@
-.notes__main-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.container-detail{
+    margin-left: 11.7%;
+    background: #ffffff;
+    width: 75.1%;
+    position: absolute;
 }
 
+.detail-img{
+    margin-top: 3%;
+    margin-left: 2%;
+    width: 39%;
+}
 
-.notes__appbar {
-    align-items: center;
-    background-color: $primary;
+.detail-product{
+    position: absolute;
+    margin-left: 61%;
+    margin-top: -28%;
+}
+
+.btn-buy{    
+    background-color: #3483FA;
+    border: none;
     color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px 10px 20px;
+    padding: 12px 88px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 6px;
+    margin-top: 124%;
+    position: absolute;
 }
 
-
-.notes__content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 20px;
+.status-product{
+    font-size: 13px;
 }
 
-
-.notes__title-input, .notes__textarea {
-    border: none;
-
-    &:focus{
-        outline: none;
-    }
+.price-container{
+    margin-top: 16%;
 }
 
-.notes__title-input {
-    color: $dark-grey;
-    font-size: 25px;
-    font-weight: 700;
-    margin-bottom: 10px;
+.name-product{
+    font-size: 26px;
+    font-weight: 600;
+    width: 378%;
+    top: 14%;
+    position: absolute;
 }
 
-.notes__textarea {
-    border: none;
-    color: $dark-grey;
+.price-product{
+    font-size: 40px;
+    font-weight: 600;
+    width: 130%;
+    top: 115%;
+    position: absolute;
+}
+
+.price-cents{
+    font-size: 21px;
+    font-weight: 600;
+    width: 61%;
+    top: 167%;
+    position: absolute;
+    left: 69%;
+}
+
+.title-product{
     font-size: 20px;
-    flex: 1 1 auto;
-    resize: none;
+    margin-left: 2%;
+    margin-top: 8%;
 }
 
-.notes__image img {
-    box-shadow: 5px 5px $dark-grey;
-    height: 150px;
+.detail-product-text{
+    font-size: 20px;
+    margin-left: 2%;
+    margin-top: 2%;
+    width: 53%;
 }

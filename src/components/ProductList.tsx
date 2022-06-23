@@ -1,26 +1,36 @@
 import React from 'react';
 import { getProduct } from '../api/getProduct';
-import { Result } from '../interfaces/product';
 
-export const ProductList = async() => {
+export const ProductList = () => {
 
-  const searchText:string | null = localStorage.getItem('searchText');
+  const searchText:string = localStorage.getItem('searchText');
   
-  const products[]:Result = await getProduct(searchText)
-
-  console.log('Entro aqui', products);
-      
+  const { data, isLoading, hasError } =  getProduct('ipod');
+  
+  
   return (
     <>
+        
         {
-          products.map( ( item:Result ) => (
-            <li key={ item.id }>
-                <img src={ item.pictures[0].url } alt={ item.pictures[0].id } />
-                <h3>{ item.title }</h3>
-                <p>{ item.price }</p>
-            </li>
-            ))
-        }
+          isLoading 
+              ?(
+                  <div className="">
+                      Loading...
+                  </div>
+                )
+              :(
+                <ul>
+                {
+                  data.map ( item => (
+                    <li key={item.id}>
+                      { item.name }
+
+                    </li>  
+                  ))
+                }
+                </ul>
+                )
+        } 
       </>
   )
 }
