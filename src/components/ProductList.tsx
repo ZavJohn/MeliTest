@@ -31,11 +31,11 @@ export const ProductList = () => {
                   )
                 :(                
 
-                  <div className="search-result-container ">
+                  <div className="search-result-container cont-boost">
                       <ul className="">
                       {
                          data.map ( item => (
-                          <li key={item.id}>
+                          <li key={item.id} className="cont-boost"> 
                             <Link 
                               to={`/items/${item.id}`}
                               state={ {item} }
