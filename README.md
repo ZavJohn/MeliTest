@@ -1,4 +1,4 @@
-# Bienvenidoa a esta prueba técnica!
+# Bienvenido a esta prueba técnica!
 Para poder visualizar el proyecto tendrán que descargar el repositorio y dentro de una carpeta nueva,  en la terminal de comandos deberán instalar por yarn o npm los siguientes paquetes:
 
 # Instalaciones
