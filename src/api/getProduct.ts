@@ -21,6 +21,7 @@ export const getProduct = ( searchText: string  ) => {
     
     const resp = await axios.get( url );
     const product: Product = resp.data;
+    localStorage.setItem('searchText', searchText)
 
     if ( product.paging.total === 0 ){
       setState({ 
@@ -42,8 +43,8 @@ export const getProduct = ( searchText: string  ) => {
 
   useEffect(() => {
 
-      getFetch();
       localStorage.removeItem('searchText');
+      getFetch();
 
   }, [url]);
 

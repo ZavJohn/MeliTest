@@ -1,28 +1,22 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useForm } from './hooks/useForm';
 
 
 export const Navbar = () => {
 
     const navigate = useNavigate();
     
-    const { searchText, onInputChange } = useForm({
-        searchText: ''
-    })
-
-    const onSearchSubmit = (event) => {
-        
-        event.preventDefault();
-        localStorage.setItem('searchText', searchText);
-        navigate(`/search/`);  
-    }
+    const [ inputValue, setInputValue ] = useState('');
 
     
-    useEffect( () => {
-       
-    },[searchText]);
-    
+    const onInputChange = ({ target }) => {
+        setInputValue( target.value );
+    };
+
+    const onSearchSubmit = (event) => {      
+        event.preventDefault(); 
+        navigate(`/items:${inputValue}`);
+    } 
     
     return (
         
@@ -44,8 +38,8 @@ export const Navbar = () => {
                         placeholder="Nunca dejes de buscar" 
                         autoCorrect="off" 
                         autoComplete="off" 
-                        value={ searchText } 
-                        onChange={ (event) => onInputChange(event) }
+                        value={ inputValue } 
+                        onChange={ (e) => onInputChange(e) }
                     />
                     
                     <button 
