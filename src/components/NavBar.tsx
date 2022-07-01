@@ -44,7 +44,7 @@ export const Navbar = () => {
                     
                     <button 
                         type="submit"
-                        className="submit" 
+                        className="btn submit" 
                         onClick={ onSearchSubmit }
                     >
                         <img src="/src/assets/images/ic_Search.png" alt="ic_Search" />

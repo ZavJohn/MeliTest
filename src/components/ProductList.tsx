@@ -12,7 +12,7 @@ export const ProductList = () => {
   
   if ( hasError ){
     return ( 
-      <div className="search-result-container ">
+      <div className="search-result-container">
         <div className="alert alert-dark" role="alert">
             No hay publicaciones que coincidan con tu búsqueda.
         </div>
@@ -25,17 +25,27 @@ export const ProductList = () => {
           {
             isLoading 
                 ?(
-                    <div className="">
-                        Loading...
+                    <div className="search-result-container cont-boost">
+                        <p className="placeholder-glow">
+                          <span className="placeholder col-12"></span>
+                        </p>
+                        
+                        <div className="alert alert-dark" role="alert">
+                          Loading...
+                        </div>
+                        
+                        <p className="placeholder-wave">
+                          <span className="placeholder col-12"></span>
+                        </p>
                     </div>
                   )
                 :(                
 
-                  <div className="search-result-container cont-boost">
-                      <ul className="">
+                  <div className="search-result-container">
+                      <ul className="container-list">
                       {
                          data.map ( item => (
-                          <li key={item.id} className="cont-boost"> 
+                          <li key={item.id} className="cont-boost "> 
                             <Link 
                               to={`/items/${item.id}`}
                               state={ {item} }
